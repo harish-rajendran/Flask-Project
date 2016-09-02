@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+ 
+{% block content %}
+  <h2>Register</h2>
+  <form action="{{ url_for('register') }}" method=post>
+    {{ form.hidden_tag() }}
+ 
+    {{ form.name.label }}
+    {{ form.name }}
+ 
+    {{ form.email.label }}
+    {{ form.email }}
+ 
+    {{ form.password.label }}
+    {{ form.password }}
+ 
+    {{ form.submit }}
+    
+    {{ form.csrf_token }}
+  </form>
+{% endblock %}
